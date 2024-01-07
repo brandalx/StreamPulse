@@ -1,5 +1,10 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-export default function Home() {
-  return <p className="text-red-500 font-bold">Stream Pulse</p>;
+export default function Page() {
+  return (
+    <Button size="lg" variant="destructive">
+      Stream Pulse
+    </Button>
+  );
 }
