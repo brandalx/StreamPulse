@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { useSidebar } from "@/store/use-sidebar";
-import { ArrowLeftFromLine } from "lucide-react";
+import { ArrowLeftFromLine, ArrowRightFromLine } from "lucide-react";
 import React from "react";
 
 const Toggle = () => {
@@ -19,6 +19,14 @@ const Toggle = () => {
             variant="ghost"
           >
             <ArrowLeftFromLine className="h-4 w-4" />
+          </Button>
+        </div>
+      )}
+
+      {collapsed && (
+        <div className="hidden lg:flex w-full items-center justify-center pt-4 mb-4 ">
+          <Button onClick={onExpand} className="h-auto p-2" variant="ghost">
+            <ArrowRightFromLine className="h-4 w-4" />
           </Button>
         </div>
       )}
