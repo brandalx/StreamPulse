@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "./_components/navbar";
 import Sidebar from "./_components/sidebar";
-import { Container } from "postcss";
+import Container from "./_components/container";
 
 const BrowseLayout = ({ children }: { children: React.ReactNode }) => {
   return (
