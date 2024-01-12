@@ -2,7 +2,7 @@ import React from "react";
 import Wrapper from "./wrapper";
 
 const Sidebar = () => {
-  return <Wrapper>Sidebar</Wrapper>;
+  return <Wrapper></Wrapper>;
 };
 
 export default Sidebar;
