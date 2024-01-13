@@ -1,5 +1,5 @@
 import React from "react";
-import Wrapper from "./wrapper";
+import { Wrapper } from "./wrapper";
 import Toggle, { ToggleSkeleton } from "./toggle";
 import Recommended, { RecommendedSkeleton } from "./recommended";
 import { getRecommended } from "@/lib/recommended-service";
