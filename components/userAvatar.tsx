@@ -29,8 +29,31 @@ const UserAvatar = ({
   imageUrl,
   isLive,
   showBadge,
+  size,
 }: UserAvatarProps) => {
-  return <div>UserAvatar</div>;
+  const canShowBadge = showBadge && isLive;
+
+  return (
+    <div className="relative">
+      <Avatar
+        className={cn(
+          isLive && "ring-2 ring-rose-500 border border-background",
+          avatarSizes({ size })
+        )}
+      >
+        <AvatarImage src={imageUrl} className="object-cover " />
+        <AvatarFallback>
+          {username[0]}
+          {username[username.length - 1]}
+        </AvatarFallback>
+      </Avatar>
+      {canShowBadge && (
+        <div className="absolute -bottom-3 left-1/2 transform -translate-x-0-x-1/2">
+          Live
+        </div>
+      )}
+    </div>
+  );
 };
 
 export default UserAvatar;
