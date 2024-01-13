@@ -7,9 +7,8 @@ export const getRecommended = async () => {
 
   try {
     const self = await getSelf();
-
     userId = self.id;
-  } catch (error) {
+  } catch {
     userId = null;
   }
 
@@ -26,6 +25,7 @@ export const getRecommended = async () => {
         createdAt: "desc",
       },
     });
+    return users;
   } else {
     users = await db.user.findMany({
       orderBy: {
