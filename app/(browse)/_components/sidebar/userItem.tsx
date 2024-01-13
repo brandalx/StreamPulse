@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useSidebar } from "@/store/use-sidebar";
 import { Skeleton } from "@/components/ui/skeleton";
 import Link from "next/link";
-import UserAvatar from "./userAvatar";
+import UserAvatar from "../../../../components/userAvatar";
 interface UserItemProps {
   username: string;
   imageUrl: string;
@@ -36,7 +36,7 @@ const UserItem = ({ username, imageUrl, isLive }: UserItemProps) => {
             collapsed && "justify-center"
           )}
         >
-          <UserAvatar />
+          <UserAvatar imageUrl={imageUrl} username={username} isLive={isLive} />
         </div>
       </Link>
     </Button>
