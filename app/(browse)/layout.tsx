@@ -8,8 +8,9 @@ const BrowseLayout = ({ children }: { children: React.ReactNode }) => {
     <>
       <Navbar />
 
-      <div className="flex h-full ">
+      <div className="flex ">
         <Sidebar />
+
         <Container>{children}</Container>
       </div>
     </>
